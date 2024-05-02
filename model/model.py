@@ -46,7 +46,7 @@ class Model:
                 if self.vincoli(parziale, elem, maxY, maxH):
                     parziale.append(elem)
                     parziale = sorted(parziale, key=lambda evento: evento._date_event_began)
-                    self.ricorsione(parziale, maxY, maxH, pos+1)
+                    self.ricorsione(parziale, maxY, maxH, lista.index(elem))
                     parziale.remove(elem)
 
 
