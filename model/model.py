@@ -56,6 +56,7 @@ class Model:
                 self._solBest = copy.deepcopy(parziale)
 
 
+
     def loadEvents(self, nerc):
         self._listEvents = DAO.getAllEvents(nerc)
 
