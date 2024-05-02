@@ -38,6 +38,7 @@ class DAO():
                     where p.nerc_id = %s 
                     order by p.date_event_began asc"""
 
+
         cursor.execute(query, (nerc,))
 
         for row in cursor:
