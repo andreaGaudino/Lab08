@@ -85,7 +85,7 @@ class Model:
             if parziale[i]._id == elem._id:
                 return False
 
-        if ((elem._date_event_finished.year - parziale[0]._date_event_began.year) < maxY and somma < maxH):
+        if ((elem._date_event_finished.year - parziale[0]._date_event_began.year) <= maxY and somma <= maxH):
             return True
         else:
             return False

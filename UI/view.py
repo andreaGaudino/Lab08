@@ -57,7 +57,7 @@ class View(ft.UserControl):
         self._controller.fillDD()
 
         #TextOutput
-        self._txtOut = ft.ListView(expand=1, spacing=10, padding=20, auto_scroll=True)
+        self._txtOut = ft.ListView(expand=1, spacing=10, padding=20, auto_scroll=False)
 
         self._page.add(self._txtOut)
 
