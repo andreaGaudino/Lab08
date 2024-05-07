@@ -14,6 +14,11 @@ class Model:
 
 
     def worstCase(self, nerc, maxY, maxH):
+        self._solBest = []
+        self._listNerc = None
+        self._listEvents = None
+        self.loadNerc()
+        self._persone_max = -1
         self.loadEvents(nerc)
         # for evento in self._listEvents:
         self.ricorsione([], maxY, maxH, 0)
@@ -22,6 +27,7 @@ class Model:
         #     print(i._id, end=" ")
         # print()
         tot_ore = 0
+        #print(self._solBest)
         for el in self._solBest:
             tot_ore += ((el._date_event_finished - el._date_event_began).total_seconds()) / 3600
         return self._persone_max, self._solBest, tot_ore
